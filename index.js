@@ -1,15 +1,38 @@
-//Task №1
+//Homework #3
 
-let firstStr = 'I';
-let secondStr = 'learn';
-let thirdStr = 'JS';
-console.log(firstStr+' '+secondStr+' '+thirdStr)
+let firstRequest = prompt('Первое число');
+let secondRequest = prompt('Второе число');
+let firstNum = Number(firstRequest);
+let secondNum = Number(secondRequest);
 
-//Task №2
+let resSum = firstNum + secondNum;
+let resSubstr = firstNum - secondNum;
+let resMult = firstNum * secondNum;
+let resDivision = firstNum / secondNum;
 
-let firstNum = 5;
-let secondNum = 7;
-let thirdNum = 7;
-let fourthNum = 4;
-let fifthNum = 9;
-console.log(firstNum+' '+secondNum+' '+thirdNum+' '+fourthNum+' '+fifthNum)
+alert(`${firstNum} + ${secondNum} = ${resSum}
+${firstNum} + ${secondNum} = ${resSubstr}
+${firstNum} * ${secondNum} = ${resMult}
+${firstNum} / ${secondNum} = ${resDivision}`)
+
+//Homework #4
+
+let requestHours = prompt('Сколько часов');
+let hours = Number(requestHours);
+
+let secondsInHours = hours * 360;
+alert(secondsInHours);
+
+//Homework #5
+
+let firstNumRequest = prompt('Первое число');
+let secondNumRequest = prompt('Второе число');
+let thirdNumRequest = prompt('Третье число');
+
+let oneNum = Number(firstNumRequest);
+let twoNum = Number(secondNumRequest);
+let threeNum = Number(thirdNumRequest);
+
+let arithmeticalMean = (oneNum+twoNum+threeNum)/3;
+
+alert(arithmeticalMean);
