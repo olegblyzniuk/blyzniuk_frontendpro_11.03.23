@@ -1,93 +1,83 @@
-//Homework #6
+//Homework #9
 
-let requestAge = prompt('Ваш год рождения?');
-let userTown = prompt('В каком городе живете?');
-let likeSport = prompt('Ваш любимый вид спорта?');
-
-let championFootball = 'Lionel Messi';
-let championSwimming = 'Michael Phelps';
-let championFormula = 'Michael Schumacher';
-
-let ifCapital
-if(userTown === "Kyiv"){
-    ifCapital = "Вы проживаете в столице Украины"
-} else if(userTown === "London"){
-    ifCapital = "Вы проживаете в столице Великобритании"
-} else if(userTown === "Washigton"){
-    ifCapital = "Вы проживаете в столице США"
-} else if(userTown === null){
-    ifCapital= "Жаль, Вы не захотели указывать свой город"
-}else{ifCapital = `Вы проживаете в городе ${userTown}`}
-
-let year = Number(requestAge);
-let calcAge = 2023-year;
-let userAge
-if(year===0){
-    userAge="Жаль, Вы не захотели указывать свой год рождения"
-}else{userAge=`Ваш  возраст: ${calcAge}`}
-
-let yourSport
-if(likeSport === "football"){
-    yourSport = `Круто! Хочешь стать как ${championFootball}?`
-}else if(likeSport === "swimming"){
-    yourSport = `Круто! Хочешь стать как ${championSwimming}?`
-}else if(likeSport === "formula1"){
-    yourSport = `Круто! Хочешь стать как ${championFormula}?`
-}else if(likeSport === null){
-    yourSport = "Жаль, Вы не захотели указывать свой любимый вид спорта"
-}else{yourSport = `Ваш любимый вид спорта ${likeSport}`}
-
-alert(`${userAge}
-${ifCapital}
-${yourSport}`)
-
-//Homework #7
-
-let numOrStr = prompt('input number or string');
-console.log(numOrStr)
-
-switch(numOrStr){
-    case null:
-        console.log('ви скасували');
-        break;
-    case  '':
-        console.log('Empty String');
-        break;
-    case isNaN( +numOrStr ):
-        console.log(' number is Ba_NaN');
-        break;
-    default:
-        console.log('OK!')
-        break;
+let i=10;
+while(i<20){
+    console.log(i);
+    i++;
 }
 
-//Homework #8
-
-let toDo = prompt('Что вы хотите сделать: add, sub, mult, div?');
-let firstNumReq = prompt ('Первое число');
-let secondNumReq = prompt('Второе число');
-
-let firstNum = Number(firstNumReq);
-let secondNum = Number(secondNumReq);
-
-let resultToDo
-
-switch(toDo){
-    case 'add':
-        resultToDo = firstNum + secondNum;
-        alert(`${firstNum} + ${secondNum} = ${resultToDo}`);
-        break;
-    case 'sub':
-        resultToDo = firstNum - secondNum;
-        alert(`${firstNum} - ${secondNum} = ${resultToDo}`);
-        break;
-    case 'mult':
-        resultToDo = firstNum * secondNum;
-        alert(`${firstNum} * ${secondNum} = ${resultToDo}`);
-        break;
-    case 'div':
-        resultToDo = firstNum / secondNum;
-        alert(`${firstNum} / ${secondNum} = ${resultToDo}`);
-        break;
+let p=10;
+while(p<20){
+    console.log(p**2);
+    p++;
 }
 
+let mainCounter = 7;
+let counter = 1;
+while(counter<=10){
+    resMult = mainCounter*counter;
+    console.log(`${mainCounter}*${counter}=${resMult}`)
+    counter++
+}
+
+let sumOfNum = 0;
+for(k=0; k<=15; k++){
+    sumOfNum+=k;
+}
+console.log(sumOfNum)
+
+let multOfNum = 1;
+for(j=15; j<=35; j++){
+    multOfNum*=j;
+}
+console.log(multOfNum)
+
+let sumOfNum2 = 0;
+for(l=0; l<=500; l++){
+    sumOfNum2+=l;
+}
+console.log(sumOfNum2)
+console.log(sumOfNum2/500)
+
+let sumOfNum3 = 0;
+for  (n=30; n<=80; n++){
+    if(n%2 === 0){
+        sumOfNum3 += n;
+    }
+}
+console.log(sumOfNum3)
+
+for( let m=100; m<=200; m++){
+    if(m%3 === 0){
+        console.log(m)
+    }
+}
+
+let someNum = prompt('Натуральное число?');
+let divider;
+let naturalNum = Number(someNum);
+let sumOfDividers=0;
+console.log(`Натуральное число ${naturalNum}`)
+for(b=1; b<=naturalNum; b++){
+        if(naturalNum%b === 0){
+        	divider = b;
+            console.log(`делится на ${divider}`)
+        }
+    }
+ for(divider=1; divider<=naturalNum; divider++){
+    if(naturalNum%divider === 0 && divider%2 === 0){
+        console.log(`делится на парный делитель ${divider}`)
+        sumOfDividers+=divider
+    }
+}
+console.log(sumOfDividers)
+
+let firstCounter;
+let secondCounter;
+let result;
+for(firstCounter=1;firstCounter<=10;firstCounter++){
+    for(secondCounter=1; secondCounter<=10;secondCounter++){
+        result= firstCounter * secondCounter;
+        console.log(`${firstCounter} * ${secondCounter} = ${result}`)
+    }
+}
