@@ -5,7 +5,7 @@ let arr = [5, 45, "Человек" , "Земля", 33, 7];
 
 function sumOfNum(array){
     let sum = 0;
-    for (var i = array.length - 1; i >= 0; i--) {
+    for (let i = array.length - 1; i >= 0; i--) {
         if (typeof array[i] === "number"){
             sum += array[i];
         }
@@ -55,9 +55,9 @@ let lengthArr = Number(reqLengthArr);
 
 function addArr(mainLength, innerLength, information){
     let mainArr = [];
-    for(i = 0; i < mainLength; i++){
+    for(let i = 0; i < mainLength; i++){
         mainArr[i] = [];
-        for(j = 0; j < innerLength; j++){
+        for(let j = 0; j < innerLength; j++){
             mainArr[i][j] = information;
         }
     }
@@ -70,19 +70,22 @@ addArr(lengthMainAr, lengthArr, inf)
 let someStr = 'hello world';
 let delSymb = ['l', 'd'];
 
-function deleteSymb (str, func){
-    let anotherStr;
-    for(i=0; i<str.length; i++){
-        anotherStr = func(str[i])
-        console.log(anotherStr)
-    }
-    
-}
-function toDel(elm, arr){
-    for(j=0; j<arr.length; j++){
-        if(elm === arr[j]){
-            return '';
+function deleteSymb (str, arr){
+    let anotherStr = '';
+    for(let i=0; i<str.length; i++){
+        let eachElm = str[i];
+        let check = false;
+        for(let j=0; j < arr.length;j++){
+            if(eachElm === arr[j]){
+                check= true;
+                break;
+            }
+        }
+        if(!check){
+            anotherStr += eachElm;
         }
     }
+    return anotherStr
 }
-deleteSymb(someStr)
+
+console.log(deleteSymb(someStr, delSymb))
