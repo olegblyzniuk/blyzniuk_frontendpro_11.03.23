@@ -61,20 +61,24 @@ let users = [
     let arrOfPhones = [];
     let sumUserBalance = 0;
     users.forEach((value)=>{
-    	let balInStr = value.balance;
-      let numOfBal = balInStr
+    	  let balInStr = value.balance;
+        
+        let numOfBal = balInStr
                     .split('')
                     .filter(elem=>{
-      	if(elem !== '$' && elem !== ','){
-        return elem;
-        }
-      })
+      	      if(elem !== '$' && elem !== ','){
+              return elem;
+              }
+              })
                     .join('');
-      let balInNum = Number(numOfBal)
-      console.log(balInNum)
-      if(balInNum > 2000){
-      	arrOfPhones.push(value.phone);
-      }
+
+        let balInNum = Number(numOfBal)
+        console.log(balInNum);
+
+        if(balInNum > 2000){
+      	  arrOfPhones.push(value.phone);
+        }
+
       sumUserBalance += balInNum;
     });
     console.log(arrOfPhones);
