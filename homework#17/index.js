@@ -61,9 +61,9 @@ let users = [
     let arrOfPhones = [];
     let sumUserBalance = 0;
     users.forEach((value)=>{
-    	  let balInStr = value.balance;
+    	let balInStr = value.balance;
         
-        let numOfBal = balInStr
+      let numOfBal = balInStr
                     .split('')
                     .filter(elem=>{
       	      if(elem !== '$' && elem !== ','){
