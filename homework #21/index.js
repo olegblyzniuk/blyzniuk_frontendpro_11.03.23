@@ -30,6 +30,7 @@ class Human {
         this.name = name;
         this.age = age;
     }
+
     showInfo(){
         console.log(`Мены зовут ${this.name}. Мне ${this.age}`)
     }
@@ -45,9 +46,12 @@ class Car extends Human {
     }
     owner;
 
-    makeOwner(obj){
-        if(obj.age > 18){
-            this.owner = obj;
+    makeOwner(){
+        if(this.age > 18){
+            this.owner = {
+            name: this.name,
+            age: this.age
+            }
         } else {
             console.log('Вы не можете управлять автомобилем');
             this.owner = 'Нет собственника'}
@@ -61,21 +65,21 @@ class Car extends Human {
 
     showOwner(){
         console.log(this.owner);
-        return super.showInfo();
     }
 }
 
 const ted = new Human('Ted', 27);
 const mike = new Human('Mike', 17);
+
 ted.showInfo();
 mike.showInfo();
 
 const kia = new Car('Kia', 'Optima', 2012, 'КХ3558ВВ', 'Ted', 27);
-kia.makeOwner(ted);
+kia.makeOwner();
 kia.showCarInfo();
 kia.showOwner();
 
 const chevrole = new Car('Chevrole', 'Cruze', 2018, 'АА9424СН', 'Mike', 17);
-chevrole.makeOwner(mike);
+chevrole.makeOwner();
 chevrole.showCarInfo();
 chevrole.showOwner();
