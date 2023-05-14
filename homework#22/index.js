@@ -88,8 +88,8 @@ const vladislav = new Student('Владислав', 'Гончарук', 1997, [1
 console.log(vladislav);
 vladislav.showAge();
 vladislav.present().present().present().present();
-vladislav.meanGrade();
-vladislav.meanVisited();
+console.log(vladislav.meanGrade());
+console.log(vladislav.meanVisited());
 vladislav.summary();
 
 const sergey = new Student('Сергей', 'Клименко', 1991, [95, 80, 80, 90]);
@@ -97,6 +97,6 @@ const sergey = new Student('Сергей', 'Клименко', 1991, [95, 80, 80
 console.log(sergey);
 sergey.showAge();
 sergey.present().absent().present().present();
-sergey.meanGrade();
-sergey.meanVisited();
+console.log(sergey.meanGrade());
+console.log(sergey.meanVisited());
 sergey.summary();
