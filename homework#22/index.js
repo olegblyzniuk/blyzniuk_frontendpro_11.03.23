@@ -12,6 +12,7 @@
 // Не забудьте після того, як напишите цей конструктор, створити 2-3 екземпляри (конкретних студентів) і показати використання цих методів.
 
 class Student {
+    
     constructor(firstName, lastName, year, arr){
         this.firstName = firstName;
         this.lastName = lastName;
@@ -53,6 +54,7 @@ class Student {
         if(this.visitLessons.length < 25){
             this.visitLessons.push(true);
         }
+
         return this;
     }
 
@@ -69,15 +71,15 @@ class Student {
             console.log('Молодець!')
             }
             
-            if (
+        if (
             this.meanGrade() < 90 && this.meanVisited() > 0.9 
             || 
             this.meanGrade() > 90 && this.meanVisited() < 0.9
-            ){
+        ){
             console.log('Добре, але можна краще ')
             }
             
-            if (this.meanGrade() < 90 && this.meanVisited() < 0.9){
+        if (this.meanGrade() < 90 && this.meanVisited() < 0.9){
             console.log('Редиска!')
             }
     }
